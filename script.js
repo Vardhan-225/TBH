@@ -187,8 +187,6 @@ allFields.forEach(fieldId => {
 
 // Form submission
 orderForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
     // Validate at least one item is ordered
     const hasItems = 
         (parseInt(document.getElementById('drumsticks').value) || 0) > 0 ||
@@ -198,52 +196,101 @@ orderForm.addEventListener('submit', (e) => {
         (document.getElementById('muttonBiryaniSize').value && (parseInt(document.getElementById('muttonBiryaniQty').value) || 0) > 0);
     
     if (!hasItems) {
+        e.preventDefault();
         alert('Please select at least one item to order.');
         return;
     }
     
-    // Collect form data
-    const formData = {
-        customerInfo: {
-            fullName: document.getElementById('fullName').value,
-            phone: document.getElementById('phone').value,
-            email: document.getElementById('email').value,
-            address: document.getElementById('address').value
-        },
-        items: {
-            drumsticks: parseInt(document.getElementById('drumsticks').value) || 0,
-            chops: parseInt(document.getElementById('chops').value) || 0,
-            chickenBiryani: {
-                size: document.getElementById('chickenBiryaniSize').value,
-                quantity: parseInt(document.getElementById('chickenBiryaniQty').value) || 0
-            },
-            paneerBiryani: {
-                size: document.getElementById('paneerBiryaniSize').value,
-                quantity: parseInt(document.getElementById('paneerBiryaniQty').value) || 0
-            },
-            muttonBiryani: {
-                size: document.getElementById('muttonBiryaniSize').value,
-                quantity: parseInt(document.getElementById('muttonBiryaniQty').value) || 0
-            }
-        },
-        preferences: {
-            spiceLevel: document.getElementById('spiceLevel').value,
-            dietary: document.getElementById('dietary').value,
-            coupon: document.getElementById('coupon').value,
-            comments: document.getElementById('comments').value
-        }
-    };
+    // Create formatted order summary for email
+    let orderSummary = '=== ORDER DETAILS ===\n\n';
+    let total = 0;
     
-    // Log the order (in production, this would be sent to a server)
-    console.log('Order submitted:', formData);
+    // Add grilled items
+    const drumsticksQty = parseInt(document.getElementById('drumsticks').value) || 0;
+    if (drumsticksQty > 0) {
+        const itemTotal = drumsticksQty * prices.drumsticks;
+        orderSummary += `Grilled Drumsticks: ${drumsticksQty} x $${prices.drumsticks} = $${itemTotal}\n`;
+        total += itemTotal;
+    }
     
-    // Show success message
-    alert('Thank you for your order! We will contact you shortly to confirm your order and provide payment details.');
+    const chopsQty = parseInt(document.getElementById('chops').value) || 0;
+    if (chopsQty > 0) {
+        const itemTotal = chopsQty * prices.chops;
+        orderSummary += `Grilled Goat/Lamb Chops: ${chopsQty} x $${prices.chops} = $${itemTotal}\n`;
+        total += itemTotal;
+    }
     
-    // Reset form
-    orderForm.reset();
-    updateProgress();
-    updateOrderSummary();
+    // Add biryani items
+    const chickenSize = document.getElementById('chickenBiryaniSize').value;
+    const chickenQty = parseInt(document.getElementById('chickenBiryaniQty').value) || 0;
+    if (chickenSize && chickenQty > 0) {
+        const pricePerItem = prices.chickenBiryani[chickenSize];
+        const itemTotal = chickenQty * pricePerItem;
+        const sizeName = document.getElementById('chickenBiryaniSize').selectedOptions[0].text;
+        orderSummary += `Chicken Biryani - ${sizeName}: ${chickenQty} x $${pricePerItem} = $${itemTotal}\n`;
+        total += itemTotal;
+    }
+    
+    const paneerSize = document.getElementById('paneerBiryaniSize').value;
+    const paneerQty = parseInt(document.getElementById('paneerBiryaniQty').value) || 0;
+    if (paneerSize && paneerQty > 0) {
+        const pricePerItem = prices.paneerBiryani[paneerSize];
+        const itemTotal = paneerQty * pricePerItem;
+        const sizeName = document.getElementById('paneerBiryaniSize').selectedOptions[0].text;
+        orderSummary += `Paneer Biryani - ${sizeName}: ${paneerQty} x $${pricePerItem} = $${itemTotal}\n`;
+        total += itemTotal;
+    }
+    
+    const muttonSize = document.getElementById('muttonBiryaniSize').value;
+    const muttonQty = parseInt(document.getElementById('muttonBiryaniQty').value) || 0;
+    if (muttonSize && muttonQty > 0) {
+        const pricePerItem = prices.muttonBiryani[muttonSize];
+        const itemTotal = muttonQty * pricePerItem;
+        const sizeName = document.getElementById('muttonBiryaniSize').selectedOptions[0].text;
+        orderSummary += `Mutton Biryani - ${sizeName}: ${muttonQty} x $${pricePerItem} = $${itemTotal}\n`;
+        total += itemTotal;
+    }
+    
+    orderSummary += `\n--- TOTAL: $${total.toFixed(2)} ---\n\n`;
+    orderSummary += `Spice Level: ${document.getElementById('spiceLevel').value}\n`;
+    
+    if (document.getElementById('dietary').value) {
+        orderSummary += `Dietary Restrictions: ${document.getElementById('dietary').value}\n`;
+    }
+    
+    if (document.getElementById('coupon').value) {
+        orderSummary += `Coupon Code: ${document.getElementById('coupon').value}\n`;
+    }
+    
+    if (document.getElementById('comments').value) {
+        orderSummary += `Additional Comments: ${document.getElementById('comments').value}\n`;
+    }
+    
+    // Add hidden field with order summary
+    let summaryField = document.getElementById('orderSummaryField');
+    if (!summaryField) {
+        summaryField = document.createElement('input');
+        summaryField.type = 'hidden';
+        summaryField.id = 'orderSummaryField';
+        summaryField.name = 'Order Summary';
+        orderForm.appendChild(summaryField);
+    }
+    summaryField.value = orderSummary;
+    
+    // Add hidden field with total
+    let totalField = document.getElementById('orderTotalField');
+    if (!totalField) {
+        totalField = document.createElement('input');
+        totalField.type = 'hidden';
+        totalField.id = 'orderTotalField';
+        totalField.name = 'Order Total';
+        orderForm.appendChild(totalField);
+    }
+    totalField.value = '$' + total.toFixed(2);
+    
+    // Form will submit naturally to FormSubmit
+    // Show submission message
+    console.log('Order being submitted:', orderSummary);
 });
 
 // Smooth scrolling for navigation links

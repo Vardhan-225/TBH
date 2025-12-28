@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -46,57 +47,166 @@
     <!-- Menu Section -->
     <section id="menu" class="menu-section">
         <div class="container">
-            <h2 class="section-title">Our Menu</h2>
-            <p class="section-subtitle">Authentic flavors, crafted with love</p>
+            <h2 class="section-title">Our Exquisite Menu</h2>
+            <p class="section-subtitle">Each dish is a masterpiece, crafted with passion and served with pride</p>
             
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <div class="menu-item-header">
-                        <h3>Grilled Drumsticks</h3>
-                        <span class="price">$2 each</span>
+            <div class="menu-category">
+                <h3 class="category-title">Grilled Specialties</h3>
+                <div class="menu-grid">
+                    <div class="menu-item premium-card">
+                        <div class="menu-image">
+                            <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=800&q=80" alt="Grilled Drumsticks" loading="lazy">
+                            <div class="menu-badge">Popular</div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-item-header">
+                                <h3>Grilled Drumsticks</h3>
+                                <span class="price">$2 <span class="price-unit">each</span></span>
+                            </div>
+                            <p class="menu-description">Tender chicken drumsticks marinated in aromatic spices and grilled to perfection over an open flame.</p>
+                            <div class="menu-features">
+                                <span class="feature-tag"><i class="fas fa-fire"></i> Grilled</span>
+                                <span class="feature-tag"><i class="fas fa-pepper-hot"></i> Spicy</span>
+                            </div>
+                        </div>
                     </div>
-                    <p class="menu-description">Tender chicken drumsticks marinated in aromatic spices and grilled to perfection.</p>
-                    <div class="menu-badge">Popular</div>
-                </div>
 
-                <div class="menu-item">
-                    <div class="menu-item-header">
-                        <h3>Grilled Goat/Lamb Chops</h3>
-                        <span class="price">$3 each</span>
+                    <div class="menu-item premium-card">
+                        <div class="menu-image">
+                            <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=800&q=80" alt="Grilled Goat/Lamb Chops" loading="lazy">
+                            <div class="menu-badge chef-special">Chef's Special</div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-item-header">
+                                <h3>Grilled Goat/Lamb Chops</h3>
+                                <span class="price">$3 <span class="price-unit">each</span></span>
+                            </div>
+                            <p class="menu-description">Succulent goat or lamb chops marinated and grilled with traditional spices, delivering an explosion of flavor.</p>
+                            <div class="menu-features">
+                                <span class="feature-tag"><i class="fas fa-star"></i> Premium</span>
+                                <span class="feature-tag"><i class="fas fa-fire"></i> Grilled</span>
+                            </div>
+                        </div>
                     </div>
-                    <p class="menu-description">Succulent goat or lamb chops marinated and grilled with traditional spices.</p>
-                    <div class="menu-badge">Chef's Special</div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="menu-item-header">
-                        <h3>Chicken Biryani</h3>
-                        <span class="price">Per Plate</span>
-                    </div>
-                    <p class="menu-description">Aromatic basmati rice layered with tender chicken, fragrant spices, and saffron. A classic favorite.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="menu-item-header">
-                        <h3>Paneer Biryani</h3>
-                        <span class="price">Per Plate</span>
-                    </div>
-                    <p class="menu-description">Fresh cottage cheese cubes with aromatic rice, herbs, and exotic spices. Perfect for vegetarians.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="menu-item-header">
-                        <h3>Mutton Biryani</h3>
-                        <span class="price">Per Plate</span>
-                    </div>
-                    <p class="menu-description">Succulent mutton pieces slow-cooked with premium basmati rice and authentic Indian spices.</p>
                 </div>
             </div>
 
-            <div class="order-cta">
-                <h3>Ready to Order?</h3>
-                <p>Place your order online for pickup or delivery</p>
-                <a href="#order" class="btn btn-primary">Order Now</a>
+            <div class="menu-category">
+                <h3 class="category-title">Signature Biryanis</h3>
+                <p class="category-subtitle">Fragrant basmati rice layered with premium ingredients and slow-cooked to perfection</p>
+                
+                <div class="menu-grid biryani-grid">
+                    <div class="menu-item premium-card biryani-card">
+                        <div class="menu-image">
+                            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=800&q=80" alt="Chicken Biryani" loading="lazy">
+                            <div class="menu-badge featured">Featured</div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-item-header">
+                                <h3>Chicken Biryani</h3>
+                                <span class="price-range">$9 - $99</span>
+                            </div>
+                            <p class="menu-description">Aromatic basmati rice layered with tender chicken, fragrant spices, and saffron. A timeless classic.</p>
+                            <div class="size-options">
+                                <div class="size-option">
+                                    <span class="size-name">Single</span>
+                                    <span class="size-price">$9</span>
+                                </div>
+                                <div class="size-option">
+                                    <span class="size-name">Family Pack</span>
+                                    <span class="size-desc">(feeds 5)</span>
+                                    <span class="size-price">$39</span>
+                                </div>
+                                <div class="size-option">
+                                    <span class="size-name">Medium Tray</span>
+                                    <span class="size-desc">(feeds 10)</span>
+                                    <span class="size-price">$75</span>
+                                </div>
+                                <div class="size-option">
+                                    <span class="size-name">Large Tray</span>
+                                    <span class="size-desc">(feeds 15)</span>
+                                    <span class="size-price">$99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item premium-card biryani-card">
+                        <div class="menu-image">
+                            <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=800&q=80" alt="Paneer Biryani" loading="lazy">
+                            <div class="menu-badge vegetarian">Vegetarian</div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-item-header">
+                                <h3>Paneer Biryani</h3>
+                                <span class="price-range">$9 - $99</span>
+                            </div>
+                            <p class="menu-description">Fresh cottage cheese cubes with aromatic rice, herbs, and exotic spices. A vegetarian delight.</p>
+                            <div class="size-options">
+                                <div class="size-option">
+                                    <span class="size-name">Single</span>
+                                    <span class="size-price">$9</span>
+                                </div>
+                                <div class="size-option">
+                                    <span class="size-name">Family Pack</span>
+                                    <span class="size-desc">(feeds 5)</span>
+                                    <span class="size-price">$39</span>
+                                </div>
+                                <div class="size-option">
+                                    <span class="size-name">Medium Tray</span>
+                                    <span class="size-desc">(feeds 10)</span>
+                                    <span class="size-price">$75</span>
+                                </div>
+                                <div class="size-option">
+                                    <span class="size-name">Large Tray</span>
+                                    <span class="size-desc">(feeds 15)</span>
+                                    <span class="size-price">$99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item premium-card biryani-card">
+                        <div class="menu-image">
+                            <img src="https://images.unsplash.com/photo-1642821373181-696a54913e93?w=800&q=80" alt="Mutton Biryani" loading="lazy">
+                            <div class="menu-badge premium">Premium</div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-item-header">
+                                <h3>Mutton Biryani</h3>
+                                <span class="price-range">$12 - $139</span>
+                            </div>
+                            <p class="menu-description">Succulent mutton pieces slow-cooked with premium basmati rice and authentic Indian spices. The ultimate indulgence.</p>
+                            <div class="size-options">
+                                <div class="size-option">
+                                    <span class="size-name">Single</span>
+                                    <span class="size-price">$12</span>
+                                </div>
+                                <div class="size-option">
+                                    <span class="size-name">Family Pack</span>
+                                    <span class="size-desc">(feeds 5)</span>
+                                    <span class="size-price">$55</span>
+                                </div>
+                                <div class="size-option">
+                                    <span class="size-name">Medium Tray</span>
+                                    <span class="size-desc">(feeds 10)</span>
+                                    <span class="size-price">$99</span>
+                                </div>
+                                <div class="size-option">
+                                    <span class="size-name">Large Tray</span>
+                                    <span class="size-desc">(feeds 15)</span>
+                                    <span class="size-price">$139</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-cta premium-cta">
+                <h3>Ready to Experience Culinary Excellence?</h3>
+                <p>Place your order now and let us bring the authentic taste of India to your doorstep</p>
+                <a href="#order" class="btn btn-primary btn-large"><i class="fas fa-shopping-bag"></i> Order Now</a>
             </div>
         </div>
     </section>
@@ -108,7 +218,13 @@
             <p class="section-subtitle">Fill out the form below and we'll prepare your delicious meal</p>
             
             <div class="order-form-container">
-                <form id="orderForm" class="order-form">
+                <form id="orderForm" class="order-form" action="https://formsubmit.co/prasad.chetti@gmail.com" method="POST">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="New Order from Texas Biryani House">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none">
+                    
                     <!-- Customer Information -->
                     <div class="form-section">
                         <h3 class="form-section-title">Customer Information</h3>
