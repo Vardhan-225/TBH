@@ -223,7 +223,7 @@ orderForm.addEventListener('submit', (e) => {
     // Add biryani items
     const chickenSize = document.getElementById('chickenBiryaniSize').value;
     const chickenQty = parseInt(document.getElementById('chickenBiryaniQty').value) || 0;
-    if (chickenSize && chickenQty > 0) {
+    if (chickenSize && chickenQty > 0 && prices.chickenBiryani[chickenSize]) {
         const pricePerItem = prices.chickenBiryani[chickenSize];
         const itemTotal = chickenQty * pricePerItem;
         const sizeName = document.getElementById('chickenBiryaniSize').selectedOptions[0].text;
@@ -233,7 +233,7 @@ orderForm.addEventListener('submit', (e) => {
     
     const paneerSize = document.getElementById('paneerBiryaniSize').value;
     const paneerQty = parseInt(document.getElementById('paneerBiryaniQty').value) || 0;
-    if (paneerSize && paneerQty > 0) {
+    if (paneerSize && paneerQty > 0 && prices.paneerBiryani[paneerSize]) {
         const pricePerItem = prices.paneerBiryani[paneerSize];
         const itemTotal = paneerQty * pricePerItem;
         const sizeName = document.getElementById('paneerBiryaniSize').selectedOptions[0].text;
@@ -243,7 +243,7 @@ orderForm.addEventListener('submit', (e) => {
     
     const muttonSize = document.getElementById('muttonBiryaniSize').value;
     const muttonQty = parseInt(document.getElementById('muttonBiryaniQty').value) || 0;
-    if (muttonSize && muttonQty > 0) {
+    if (muttonSize && muttonQty > 0 && prices.muttonBiryani[muttonSize]) {
         const pricePerItem = prices.muttonBiryani[muttonSize];
         const itemTotal = muttonQty * pricePerItem;
         const sizeName = document.getElementById('muttonBiryaniSize').selectedOptions[0].text;
