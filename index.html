@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Texas Biryani House - Authentic Indian Biryani in Texas. Experience the finest biryanis with traditional flavors and modern hospitality.">
+    <meta name="keywords" content="biryani, Indian food, restaurant, Texas, authentic cuisine">
+    <title>Texas Biryani House - Authentic Indian Biryani</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Texas Biryani House</h1>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#order" class="nav-link">Order Online</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to Texas Biryani House</h1>
+            <p class="hero-subtitle">Where Authentic Indian Flavors Meet Southern Hospitality</p>
+            <a href="#order" class="btn btn-primary">Order Now</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">Our Menu</h2>
+            <p class="section-subtitle">Authentic flavors, crafted with love</p>
+            
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Grilled Drumsticks</h3>
+                        <span class="price">$2 each</span>
+                    </div>
+                    <p class="menu-description">Tender chicken drumsticks marinated in aromatic spices and grilled to perfection.</p>
+                    <div class="menu-badge">Popular</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Grilled Goat/Lamb Chops</h3>
+                        <span class="price">$3 each</span>
+                    </div>
+                    <p class="menu-description">Succulent goat or lamb chops marinated and grilled with traditional spices.</p>
+                    <div class="menu-badge">Chef's Special</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Chicken Biryani</h3>
+                        <span class="price">Per Plate</span>
+                    </div>
+                    <p class="menu-description">Aromatic basmati rice layered with tender chicken, fragrant spices, and saffron. A classic favorite.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Paneer Biryani</h3>
+                        <span class="price">Per Plate</span>
+                    </div>
+                    <p class="menu-description">Fresh cottage cheese cubes with aromatic rice, herbs, and exotic spices. Perfect for vegetarians.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Mutton Biryani</h3>
+                        <span class="price">Per Plate</span>
+                    </div>
+                    <p class="menu-description">Succulent mutton pieces slow-cooked with premium basmati rice and authentic Indian spices.</p>
+                </div>
+            </div>
+
+            <div class="order-cta">
+                <h3>Ready to Order?</h3>
+                <p>Place your order online for pickup or delivery</p>
+                <a href="#order" class="btn btn-primary">Order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="order" class="order-section">
+        <div class="container">
+            <h2 class="section-title">Place Your Order</h2>
+            <p class="section-subtitle">Fill out the form below and we'll prepare your delicious meal</p>
+            
+            <div class="order-form-container">
+                <form id="orderForm" class="order-form">
+                    <!-- Customer Information -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">Customer Information</h3>
+                        
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="(123) 456-7890">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Delivery Address *</label>
+                            <textarea id="address" name="address" required rows="3" placeholder="Enter your complete delivery address"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Menu Items -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">Select Items</h3>
+                        
+                        <div class="form-group">
+                            <label for="drumsticks">Grilled Drumsticks - $2 each</label>
+                            <input type="number" id="drumsticks" name="drumsticks" min="0" value="0" placeholder="Enter quantity (e.g., 1 or 2)">
+                            <small>Please enter quantity</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="chops">Grilled Goat/Lamb Chops - $3 each</label>
+                            <input type="number" id="chops" name="chops" min="0" value="0" placeholder="Enter quantity (e.g., 1 or 2)">
+                            <small>Please enter quantity</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="chickenBiryani">Chicken Biryani</label>
+                            <input type="number" id="chickenBiryani" name="chickenBiryani" min="0" value="0" placeholder="Enter quantity (e.g., 1 or 2)">
+                            <small>Please enter quantity</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="paneerBiryani">Paneer Biryani</label>
+                            <input type="number" id="paneerBiryani" name="paneerBiryani" min="0" value="0" placeholder="Enter quantity (e.g., 1 or 2)">
+                            <small>Please enter quantity</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="muttonBiryani">Mutton Biryani</label>
+                            <input type="number" id="muttonBiryani" name="muttonBiryani" min="0" value="0" placeholder="Enter quantity (e.g., 1 or 2)">
+                            <small>Please enter quantity</small>
+                        </div>
+                    </div>
+
+                    <!-- Preferences -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">Preferences</h3>
+                        
+                        <div class="form-group">
+                            <label for="spiceLevel">Spice Level *</label>
+                            <select id="spiceLevel" name="spiceLevel" required>
+                                <option value="">Select spice level</option>
+                                <option value="mild">Mild</option>
+                                <option value="medium">Medium</option>
+                                <option value="hot">Hot</option>
+                                <option value="extra-hot">Extra Hot</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dietary">Dietary Restrictions</label>
+                            <textarea id="dietary" name="dietary" rows="2" placeholder="Please specify any dietary restrictions"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="coupon">Coupon Code</label>
+                            <input type="text" id="coupon" name="coupon" placeholder="Enter your coupon code, if any">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comments">Additional Comments/Notes</label>
+                            <textarea id="comments" name="comments" rows="3" placeholder="Any additional comments or special requests"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="form-progress">
+                        <div class="progress-label">
+                            <span>Current Progress</span>
+                            <span id="progressPercent">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-submit">Submit Order</button>
+                </form>
+
+                <!-- Order Summary -->
+                <div class="order-summary" id="orderSummary">
+                    <h3>Order Summary</h3>
+                    <div id="summaryContent">
+                        <p class="empty-summary">Add items to see your order summary</p>
+                    </div>
+                    <div class="summary-total">
+                        <strong>Estimated Total:</strong>
+                        <strong id="totalAmount">$0.00</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Our Story</h2>
+                    <p>Texas Biryani House was born from a passion for authentic Indian cuisine and a desire to share the rich flavors of traditional biryani with the great state of Texas.</p>
+                    <p>Our chefs bring decades of experience from the kitchens of Hyderabad, known as the biryani capital of India. Every dish is prepared using time-honored recipes passed down through generations, combined with the freshest local ingredients.</p>
+                    <p>We believe in the perfect balance of spices, the finest quality meats and vegetables, and cooking techniques that bring out the best in every grain of rice. Whether you're a biryani connoisseur or trying it for the first time, we promise an unforgettable culinary experience.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <h4>🌟 Authentic Recipes</h4>
+                            <p>Traditional recipes from Hyderabad</p>
+                        </div>
+                        <div class="feature">
+                            <h4>🥘 Fresh Ingredients</h4>
+                            <p>Locally sourced, premium quality</p>
+                        </div>
+                        <div class="feature">
+                            <h4>👨‍🍳 Expert Chefs</h4>
+                            <p>Decades of culinary expertise</p>
+                        </div>
+                        <div class="feature">
+                            <h4>❤️ Made with Love</h4>
+                            <p>Every dish crafted with care</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Visit Us</h2>
+            <p class="section-subtitle">Come experience the authentic taste of India</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>📍 Location</h3>
+                        <p>123 Main Street<br>Houston, TX 77001<br>United States</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>📞 Phone</h3>
+                        <p>(713) 555-0123</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>📧 Email</h3>
+                        <p>info@texasbiryaniihouse.com</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>🕐 Hours</h3>
+                        <p>Monday - Thursday: 11:00 AM - 10:00 PM<br>
+                           Friday - Saturday: 11:00 AM - 11:00 PM<br>
+                           Sunday: 12:00 PM - 9:00 PM</p>
+                    </div>
+                </div>
+                
+                <div class="map-placeholder">
+                    <div class="map-content">
+                        <p>📍 Find us in the heart of Houston</p>
+                        <p>Free parking available</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Texas Biryani House</h3>
+                    <p>Bringing authentic Indian flavors to Texas since 2024</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#order">Order Online</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Texas Biryani House. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
