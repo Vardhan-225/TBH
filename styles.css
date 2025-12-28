@@ -354,6 +354,27 @@ section {
     max-width: 150px;
 }
 
+.biryani-group {
+    padding: 1rem;
+    background: var(--white);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.biryani-group label {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+}
+
+.biryani-size-select {
+    margin-bottom: 0.8rem;
+}
+
+.biryani-group input[type="number"] {
+    margin-top: 0.5rem;
+}
+
 .form-progress {
     margin: 2rem 0;
     padding: 1.5rem;

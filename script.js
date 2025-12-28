@@ -25,16 +25,34 @@ const totalAmount = document.getElementById('totalAmount');
 const prices = {
     drumsticks: 2,
     chops: 3,
-    chickenBiryani: 0, // Price to be determined or per plate
-    paneerBiryani: 0,
-    muttonBiryani: 0
+    chickenBiryani: {
+        'single-9': 9,
+        'family-39': 39,
+        'medium-75': 75,
+        'large-99': 99
+    },
+    paneerBiryani: {
+        'single-9': 9,
+        'family-39': 39,
+        'medium-75': 75,
+        'large-99': 99
+    },
+    muttonBiryani: {
+        'single-12': 12,
+        'family-55': 55,
+        'medium-99': 99,
+        'large-139': 139
+    }
 };
 
 // Track form fields
 const requiredFields = ['fullName', 'phone', 'email', 'address', 'spiceLevel'];
 const allFields = [
     'fullName', 'phone', 'email', 'address',
-    'drumsticks', 'chops', 'chickenBiryani', 'paneerBiryani', 'muttonBiryani',
+    'drumsticks', 'chops', 
+    'chickenBiryaniSize', 'chickenBiryaniQty',
+    'paneerBiryaniSize', 'paneerBiryaniQty',
+    'muttonBiryaniSize', 'muttonBiryaniQty',
     'spiceLevel', 'dietary', 'coupon', 'comments'
 ];
 
@@ -47,6 +65,10 @@ function updateProgress() {
         if (field) {
             if (field.type === 'number') {
                 if (field.value && parseInt(field.value) > 0) {
+                    filledFields++;
+                }
+            } else if (field.tagName === 'SELECT') {
+                if (field.value !== '') {
                     filledFields++;
                 }
             } else if (field.value.trim() !== '') {
@@ -88,30 +110,45 @@ function updateOrderSummary() {
     }
     
     // Chicken Biryani
-    const chickenQty = parseInt(document.getElementById('chickenBiryani').value) || 0;
-    if (chickenQty > 0) {
+    const chickenSize = document.getElementById('chickenBiryaniSize').value;
+    const chickenQty = parseInt(document.getElementById('chickenBiryaniQty').value) || 0;
+    if (chickenSize && chickenQty > 0) {
+        const pricePerItem = prices.chickenBiryani[chickenSize];
+        const itemTotal = chickenQty * pricePerItem;
+        const sizeName = document.getElementById('chickenBiryaniSize').selectedOptions[0].text;
         items.push({
-            name: `Chicken Biryani (${chickenQty} plate${chickenQty > 1 ? 's' : ''})`,
-            price: 0
+            name: `Chicken Biryani - ${sizeName} (${chickenQty})`,
+            price: itemTotal
         });
+        total += itemTotal;
     }
     
     // Paneer Biryani
-    const paneerQty = parseInt(document.getElementById('paneerBiryani').value) || 0;
-    if (paneerQty > 0) {
+    const paneerSize = document.getElementById('paneerBiryaniSize').value;
+    const paneerQty = parseInt(document.getElementById('paneerBiryaniQty').value) || 0;
+    if (paneerSize && paneerQty > 0) {
+        const pricePerItem = prices.paneerBiryani[paneerSize];
+        const itemTotal = paneerQty * pricePerItem;
+        const sizeName = document.getElementById('paneerBiryaniSize').selectedOptions[0].text;
         items.push({
-            name: `Paneer Biryani (${paneerQty} plate${paneerQty > 1 ? 's' : ''})`,
-            price: 0
+            name: `Paneer Biryani - ${sizeName} (${paneerQty})`,
+            price: itemTotal
         });
+        total += itemTotal;
     }
     
     // Mutton Biryani
-    const muttonQty = parseInt(document.getElementById('muttonBiryani').value) || 0;
-    if (muttonQty > 0) {
+    const muttonSize = document.getElementById('muttonBiryaniSize').value;
+    const muttonQty = parseInt(document.getElementById('muttonBiryaniQty').value) || 0;
+    if (muttonSize && muttonQty > 0) {
+        const pricePerItem = prices.muttonBiryani[muttonSize];
+        const itemTotal = muttonQty * pricePerItem;
+        const sizeName = document.getElementById('muttonBiryaniSize').selectedOptions[0].text;
         items.push({
-            name: `Mutton Biryani (${muttonQty} plate${muttonQty > 1 ? 's' : ''})`,
-            price: 0
+            name: `Mutton Biryani - ${sizeName} (${muttonQty})`,
+            price: itemTotal
         });
+        total += itemTotal;
     }
     
     // Update summary display
@@ -123,14 +160,14 @@ function updateOrderSummary() {
             summaryHTML += `
                 <div class="summary-item">
                     <span class="summary-item-name">${item.name}</span>
-                    <span class="summary-item-price">${item.price > 0 ? '$' + item.price.toFixed(2) : 'TBD'}</span>
+                    <span class="summary-item-price">$${item.price.toFixed(2)}</span>
                 </div>
             `;
         });
         summaryContent.innerHTML = summaryHTML;
     }
     
-    totalAmount.textContent = total > 0 ? '$' + total.toFixed(2) : '$0.00';
+    totalAmount.textContent = '$' + total.toFixed(2);
 }
 
 // Add event listeners to all form fields
@@ -156,9 +193,9 @@ orderForm.addEventListener('submit', (e) => {
     const hasItems = 
         (parseInt(document.getElementById('drumsticks').value) || 0) > 0 ||
         (parseInt(document.getElementById('chops').value) || 0) > 0 ||
-        (parseInt(document.getElementById('chickenBiryani').value) || 0) > 0 ||
-        (parseInt(document.getElementById('paneerBiryani').value) || 0) > 0 ||
-        (parseInt(document.getElementById('muttonBiryani').value) || 0) > 0;
+        (document.getElementById('chickenBiryaniSize').value && (parseInt(document.getElementById('chickenBiryaniQty').value) || 0) > 0) ||
+        (document.getElementById('paneerBiryaniSize').value && (parseInt(document.getElementById('paneerBiryaniQty').value) || 0) > 0) ||
+        (document.getElementById('muttonBiryaniSize').value && (parseInt(document.getElementById('muttonBiryaniQty').value) || 0) > 0);
     
     if (!hasItems) {
         alert('Please select at least one item to order.');
@@ -176,9 +213,18 @@ orderForm.addEventListener('submit', (e) => {
         items: {
             drumsticks: parseInt(document.getElementById('drumsticks').value) || 0,
             chops: parseInt(document.getElementById('chops').value) || 0,
-            chickenBiryani: parseInt(document.getElementById('chickenBiryani').value) || 0,
-            paneerBiryani: parseInt(document.getElementById('paneerBiryani').value) || 0,
-            muttonBiryani: parseInt(document.getElementById('muttonBiryani').value) || 0
+            chickenBiryani: {
+                size: document.getElementById('chickenBiryaniSize').value,
+                quantity: parseInt(document.getElementById('chickenBiryaniQty').value) || 0
+            },
+            paneerBiryani: {
+                size: document.getElementById('paneerBiryaniSize').value,
+                quantity: parseInt(document.getElementById('paneerBiryaniQty').value) || 0
+            },
+            muttonBiryani: {
+                size: document.getElementById('muttonBiryaniSize').value,
+                quantity: parseInt(document.getElementById('muttonBiryaniQty').value) || 0
+            }
         },
         preferences: {
             spiceLevel: document.getElementById('spiceLevel').value,
