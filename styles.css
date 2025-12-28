@@ -1117,29 +1117,10 @@ html {
 }
 
 /* Enhanced Button Styles */
-.btn-primary {
-    background: linear-gradient(135deg, var(--white), #f0f0f0);
-    color: var(--primary-color);
-    border: 2px solid var(--white);
-}
-
-.btn-primary:hover {
-    background: var(--white);
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 15px 40px rgba(255,255,255,0.4);
-}
+/* Note: Primary button styles are defined in Hero Section above */
 
 /* Smooth Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+/* Note: fadeInUp animation is defined in Hero Section above */
 
 @keyframes float {
     0%, 100% {
