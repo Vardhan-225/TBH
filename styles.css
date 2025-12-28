@@ -214,7 +214,7 @@ section {
 
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
 }
@@ -781,6 +781,14 @@ section {
     .btn {
         padding: 0.8rem 2rem;
     }
+
+    .menu-image {
+        height: 200px;
+    }
+
+    .biryani-grid {
+        gap: 1.5rem;
+    }
 }
 
 /* Smooth Scrolling */
@@ -825,6 +833,7 @@ html {
     overflow: hidden;
     transition: var(--transition);
     border: 1px solid #e0e0e0;
+    max-width: 100%;
 }
 
 .premium-card:hover {
@@ -838,13 +847,16 @@ html {
     width: 100%;
     height: 250px;
     overflow: hidden;
+    max-width: 100%;
 }
 
 .menu-image img {
     width: 100%;
     height: 100%;
+    max-width: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
+    display: block;
 }
 
 .premium-card:hover .menu-image img {
@@ -965,7 +977,7 @@ html {
 
 .biryani-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
     gap: 2.5rem;
 }
 
