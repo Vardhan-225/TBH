@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Texas Biryani House - Authentic Indian Biryani in DFW. Cloud kitchen offering home delivery of the finest biryanis with traditional flavors.">
+    <meta name="keywords" content="biryani, Indian food, cloud kitchen, DFW, Dallas, home delivery, authentic cuisine">
+    <title>Texas Biryani House - Authentic Indian Biryani</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Texas Biryani House</h1>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#order" class="nav-link">Order Online</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to Texas Biryani House</h1>
+            <p class="hero-subtitle">Authentic Indian Flavors Delivered to Your Door in DFW</p>
+            <a href="#order" class="btn btn-primary">Order Now</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">Our Exquisite Menu</h2>
+            <p class="section-subtitle">Each dish is a masterpiece, crafted with passion and served with pride</p>
+            
+            <div class="menu-category">
+                <h3 class="category-title">Grilled Specialties</h3>
+                <div class="menu-grid">
+                    <div class="menu-item premium-card">
+                        <div class="menu-image">
+                            <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=800&q=80" alt="Grilled Drumsticks" loading="lazy">
+                            <div class="menu-badge">Popular</div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-item-header">
+                                <h3>Grilled Drumsticks</h3>
+                                <span class="price">$2 <span class="price-unit">each</span></span>
+                            </div>
+                            <p class="menu-description">Tender chicken drumsticks marinated in aromatic spices and grilled to perfection over an open flame.</p>
+                            <div class="menu-features">
+                                <span class="feature-tag"><i class="fas fa-fire"></i> Grilled</span>
+                                <span class="feature-tag"><i class="fas fa-pepper-hot"></i> Spicy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item premium-card">
+                        <div class="menu-image">
+                            <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=800&q=80" alt="Grilled Goat/Lamb Chops" loading="lazy">
+                            <div class="menu-badge chef-special">Chef's Special</div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-item-header">
+                                <h3>Grilled Goat/Lamb Chops</h3>
+                                <span class="price">$3 <span class="price-unit">each</span></span>
+                            </div>
+                            <p class="menu-description">Succulent goat or lamb chops marinated and grilled with traditional spices, delivering an explosion of flavor.</p>
+                            <div class="menu-features">
+                                <span class="feature-tag"><i class="fas fa-star"></i> Premium</span>
+                                <span class="feature-tag"><i class="fas fa-fire"></i> Grilled</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3 class="category-title">Signature Biryanis</h3>
+                <p class="category-subtitle">Fragrant basmati rice layered with premium ingredients and slow-cooked to perfection</p>
+                
+                <div class="menu-grid biryani-grid">
+                    <div class="menu-item premium-card biryani-card">
+                        <div class="menu-image">
+                            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=800&q=80" alt="Chicken Biryani" loading="lazy">
+                            <div class="menu-badge featured">Featured</div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-item-header">
+                                <h3>Chicken Biryani</h3>
+                                <span class="price-range">$9 - $99</span>
+                            </div>
+                            <p class="menu-description">Aromatic basmati rice layered with tender chicken, fragrant spices, and saffron. A timeless classic.</p>
+                            <div class="size-options">
+                                <div class="size-option">
+                                    <span class="size-name">Single</span>
+                                    <span class="size-price">$9</span>
+                                </div>
+                                <div class="size-option">
+                                    <span class="size-name">Family Pack</span>
+                                    <span class="size-desc">(feeds 5)</span>
+                                    <span class="size-price">$39</span>
+                                </div>
+                                <div class="size-option">
+                                    <span class="size-name">Medium Tray</span>
+                                    <span class="size-desc">(feeds 10)</span>
+                                    <span class="size-price">$75</span>
+                                </div>
+                                <div class="size-option">
+                                    <span class="size-name">Large Tray</span>
+                                    <span class="size-desc">(feeds 15)</span>
+                                    <span class="size-price">$99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item premium-card biryani-card">
+                        <div class="menu-image">
+                            <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=800&q=80" alt="Paneer Biryani" loading="lazy">
+                            <div class="menu-badge vegetarian">Vegetarian</div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-item-header">
+                                <h3>Paneer Biryani</h3>
+                                <span class="price-range">$9 - $99</span>
+                            </div>
+                            <p class="menu-description">Fresh cottage cheese cubes with aromatic rice, herbs, and exotic spices. A vegetarian delight.</p>
+                            <div class="size-options">
+                                <div class="size-option">
+                                    <span class="size-name">Single</span>
+                                    <span class="size-price">$9</span>
+                                </div>
+                                <div class="size-option">
+                                    <span class="size-name">Family Pack</span>
+                                    <span class="size-desc">(feeds 5)</span>
+                                    <span class="size-price">$39</span>
+                                </div>
+                                <div class="size-option">
+                                    <span class="size-name">Medium Tray</span>
+                                    <span class="size-desc">(feeds 10)</span>
+                                    <span class="size-price">$75</span>
+                                </div>
+                                <div class="size-option">
+                                    <span class="size-name">Large Tray</span>
+                                    <span class="size-desc">(feeds 15)</span>
+                                    <span class="size-price">$99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item premium-card biryani-card">
+                        <div class="menu-image">
+                            <img src="https://images.unsplash.com/photo-1642821373181-696a54913e93?w=800&q=80" alt="Mutton Biryani" loading="lazy">
+                            <div class="menu-badge premium">Premium</div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-item-header">
+                                <h3>Mutton Biryani</h3>
+                                <span class="price-range">$12 - $139</span>
+                            </div>
+                            <p class="menu-description">Succulent mutton pieces slow-cooked with premium basmati rice and authentic Indian spices. The ultimate indulgence.</p>
+                            <div class="size-options">
+                                <div class="size-option">
+                                    <span class="size-name">Single</span>
+                                    <span class="size-price">$12</span>
+                                </div>
+                                <div class="size-option">
+                                    <span class="size-name">Family Pack</span>
+                                    <span class="size-desc">(feeds 5)</span>
+                                    <span class="size-price">$55</span>
+                                </div>
+                                <div class="size-option">
+                                    <span class="size-name">Medium Tray</span>
+                                    <span class="size-desc">(feeds 10)</span>
+                                    <span class="size-price">$99</span>
+                                </div>
+                                <div class="size-option">
+                                    <span class="size-name">Large Tray</span>
+                                    <span class="size-desc">(feeds 15)</span>
+                                    <span class="size-price">$139</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-cta premium-cta">
+                <h3>Ready to Experience Culinary Excellence?</h3>
+                <p>Place your order now and let us bring the authentic taste of India to your doorstep</p>
+                <a href="#order" class="btn btn-primary btn-large"><i class="fas fa-shopping-bag"></i> Order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="order" class="order-section">
+        <div class="container">
+            <h2 class="section-title">Place Your Order</h2>
+            <p class="section-subtitle">Fill out the form below and we'll prepare your delicious meal</p>
+            
+            <div class="order-form-container">
+                <form id="orderForm" class="order-form" action="https://formsubmit.co/prasad.chetti@gmail.com" method="POST">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="New Order from Texas Biryani House">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none">
+                    
+                    <!-- Customer Information -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">Customer Information</h3>
+                        
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="(123) 456-7890">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Delivery Address *</label>
+                            <textarea id="address" name="address" required rows="3" placeholder="Enter your complete delivery address"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Menu Items -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">Select Items</h3>
+                        
+                        <div class="form-group">
+                            <label for="drumsticks">Grilled Drumsticks - $2 each</label>
+                            <input type="number" id="drumsticks" name="drumsticks" min="0" value="0" placeholder="Enter quantity (e.g., 1 or 2)">
+                            <small>Please enter quantity</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="chops">Grilled Goat/Lamb Chops - $3 each</label>
+                            <input type="number" id="chops" name="chops" min="0" value="0" placeholder="Enter quantity (e.g., 1 or 2)">
+                            <small>Please enter quantity</small>
+                        </div>
+
+                        <div class="form-group biryani-group">
+                            <label for="chickenBiryaniSize">Chicken Biryani</label>
+                            <select id="chickenBiryaniSize" name="chickenBiryaniSize" class="biryani-size-select">
+                                <option value="">Select size</option>
+                                <option value="single-9">Single Biryani - $9 each</option>
+                                <option value="family-39">Family Pack (feeds 5) - $39 each</option>
+                                <option value="medium-75">Medium Tray (feeds 10) - $75 each</option>
+                                <option value="large-99">Large Tray (feeds 15) - $99 each</option>
+                            </select>
+                            <input type="number" id="chickenBiryaniQty" name="chickenBiryaniQty" min="0" value="0" placeholder="Enter quantity (e.g., 1 or 2)">
+                            <small>Please enter quantity</small>
+                        </div>
+
+                        <div class="form-group biryani-group">
+                            <label for="paneerBiryaniSize">Paneer Biryani</label>
+                            <select id="paneerBiryaniSize" name="paneerBiryaniSize" class="biryani-size-select">
+                                <option value="">Select size</option>
+                                <option value="single-9">Single Biryani - $9 each</option>
+                                <option value="family-39">Family Pack (feeds 5) - $39 each</option>
+                                <option value="medium-75">Medium Tray (feeds 10) - $75 each</option>
+                                <option value="large-99">Large Tray (feeds 15) - $99 each</option>
+                            </select>
+                            <input type="number" id="paneerBiryaniQty" name="paneerBiryaniQty" min="0" value="0" placeholder="Enter quantity (e.g., 1 or 2)">
+                            <small>Please enter quantity</small>
+                        </div>
+
+                        <div class="form-group biryani-group">
+                            <label for="muttonBiryaniSize">Mutton Biryani</label>
+                            <select id="muttonBiryaniSize" name="muttonBiryaniSize" class="biryani-size-select">
+                                <option value="">Select size</option>
+                                <option value="single-12">Single Biryani - $12 each</option>
+                                <option value="family-55">Family Pack (feeds 5) - $55 each</option>
+                                <option value="medium-99">Medium Tray (feeds 10) - $99 each</option>
+                                <option value="large-139">Large Tray (feeds 15) - $139 each</option>
+                            </select>
+                            <input type="number" id="muttonBiryaniQty" name="muttonBiryaniQty" min="0" value="0" placeholder="Enter quantity (e.g., 1 or 2)">
+                            <small>Please enter quantity</small>
+                        </div>
+                    </div>
+
+                    <!-- Preferences -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">Preferences</h3>
+                        
+                        <div class="form-group">
+                            <label for="spiceLevel">Spice Level *</label>
+                            <select id="spiceLevel" name="spiceLevel" required>
+                                <option value="">Select spice level</option>
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dietary">Dietary Restrictions</label>
+                            <textarea id="dietary" name="dietary" rows="2" placeholder="Please specify any dietary restrictions"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="coupon">Coupon Code</label>
+                            <input type="text" id="coupon" name="coupon" placeholder="Enter your coupon code, if any">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comments">Additional Comments/Notes</label>
+                            <textarea id="comments" name="comments" rows="3" placeholder="Any additional comments or special requests"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="form-progress">
+                        <div class="progress-label">
+                            <span>Current Progress</span>
+                            <span id="progressPercent">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-submit">Submit Order</button>
+                </form>
+
+                <!-- Order Summary -->
+                <div class="order-summary" id="orderSummary">
+                    <h3>Order Summary</h3>
+                    <div id="summaryContent">
+                        <p class="empty-summary">Add items to see your order summary</p>
+                    </div>
+                    <div class="summary-total">
+                        <strong>Estimated Total:</strong>
+                        <strong id="totalAmount">$0.00</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Our Story</h2>
+                    <p>Texas Biryani House is a cloud kitchen born from a passion for authentic Indian cuisine and a desire to share the rich flavors of traditional biryani with the DFW area.</p>
+                    <p>Our chefs bring decades of experience from the kitchens of Hyderabad, known as the biryani capital of India. Every dish is prepared using time-honored recipes passed down through generations, combined with the freshest local ingredients.</p>
+                    <p>As a cloud kitchen specializing in home delivery, we bring restaurant-quality biryani directly to your doorstep. We believe in the perfect balance of spices, the finest quality meats and vegetables, and cooking techniques that bring out the best in every grain of rice.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <h4>🌟 Authentic Recipes</h4>
+                            <p>Traditional recipes from Hyderabad</p>
+                        </div>
+                        <div class="feature">
+                            <h4>🚚 Home Delivery</h4>
+                            <p>Fresh biryani delivered to your door</p>
+                        </div>
+                        <div class="feature">
+                            <h4>👨‍🍳 Expert Chefs</h4>
+                            <p>Decades of culinary expertise</p>
+                        </div>
+                        <div class="feature">
+                            <h4>❤️ Made with Love</h4>
+                            <p>Every dish crafted with care</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">Order delivery across the DFW area</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>📍 Service Area</h3>
+                        <p>DFW Area<br>Dallas-Fort Worth Metroplex<br>Home Delivery Available</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>📞 Phone</h3>
+                        <p>+1 402 457 9419</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>📧 Email</h3>
+                        <p>info@texasbiryaniihouse.com</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>📱 Follow Us</h3>
+                        <p><a href="https://www.instagram.com/texasbiryanihouse/" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: none;">@texasbiryanihouse</a></p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>🕐 Hours</h3>
+                        <p>Monday - Thursday: 11:00 AM - 10:00 PM<br>
+                           Friday - Saturday: 11:00 AM - 11:00 PM<br>
+                           Sunday: 12:00 PM - 9:00 PM</p>
+                    </div>
+                </div>
+                
+                <div class="map-placeholder">
+                    <div class="map-content">
+                        <p>🚚 Home Delivery Service</p>
+                        <p>Serving the DFW Metroplex</p>
+                        <p>Fresh biryani delivered to your door</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Texas Biryani House</h3>
+                    <p>Cloud kitchen bringing authentic Indian flavors to DFW since 2024</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#order">Order Online</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/texasbiryanihouse/" target="_blank" rel="noopener noreferrer" class="social-link">Instagram</a>
+                    </div>
+                    <p style="margin-top: 1rem; color: #cccccc;">📞 +1 402 457 9419</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Texas Biryani House. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
